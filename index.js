@@ -6,7 +6,7 @@ const port = 3000; // You can change the port
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-app.post('/api/chat', async (req, res) => {
+app.get('/api/chat', async (req, res) => {
   try {
     // Get query from request body
     const { query } = req.body;
