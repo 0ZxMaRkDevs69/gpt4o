@@ -1,14 +1,11 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const port = 3000; // You can change the port
-
-// Middleware to parse JSON bodies
+const port = 3000; 
 app.use(express.json());
 
-app.get('/api/chat', async (req, res) => {
+app.get('/gpt4o', async (req, res) => {
   try {
-    // Get query from request body
     const { query } = req.body;
 
     if (!query) {
