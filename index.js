@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.get('/gpt4o', async (req, res) => {
   try {
-    const { query } = req.body;
+    const { query } = req.query; // Use req.query for GET request
 
     if (!query) {
       return res.status(400).send({ error: 'Query is required' });
